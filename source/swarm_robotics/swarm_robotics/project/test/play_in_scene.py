@@ -89,7 +89,7 @@ def main():
     env_cfg = H1RoughEnvCfg_PLAY()
     
     # env_cfg = AnymalCRoughEnvCfg_PLAY()
-    env_cfg.scene.num_envs = 1
+    env_cfg.scene.num_envs = 20
     env_cfg.curriculum = None
     env_cfg.scene.terrain = TerrainImporterCfg(
         prim_path="/World/ground",

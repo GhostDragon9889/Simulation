@@ -97,6 +97,8 @@ def main():
     # Set main camera
     sim.set_camera_view([2.0, 0.0, 2.5], [-0.5, 0.0, 0.5])
 
+
+
     # Design scene by adding assets to it
     design_scene()
 
