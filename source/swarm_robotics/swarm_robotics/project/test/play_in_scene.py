@@ -27,7 +27,7 @@ from isaaclab.app import AppLauncher
 parser = argparse.ArgumentParser(description="Tutorial on inferencing a policy on an H1 robot in a warehouse.")
 parser.add_argument("--checkpoint",
                     default="/project/EXP/Simulation/logs/rsl_rl/anymal_d_rough/2025-03-12_19-12-33/2025-03-05_14-36-30/exported/policy.pt",
-                      type=str, help="Path to model checkpoint exported as jit.", required=False)
+                    type=str, help="Path to model checkpoint exported as jit.", required=False)
 
 # append AppLauncher cli args
 AppLauncher.add_app_launcher_args(parser)
@@ -47,10 +47,10 @@ import omni
 
 from isaaclab.envs import ManagerBasedRLEnv
 from isaaclab.terrains import TerrainImporterCfg
-from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
+# from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
 
 from swarm_robotics.tasks.locomotion.velocity.config.h1.rough_env_cfg import H1RoughEnvCfg_PLAY
-from isaaclab_tasks.manager_based.locomotion.velocity.config.anymal_c.rough_env_cfg import AnymalCRoughEnvCfg_PLAY
+# from isaaclab_tasks.manager_based.locomotion.velocity.config.anymal_c.rough_env_cfg import AnymalCRoughEnvCfg_PLAY
 
 
 """
@@ -95,7 +95,7 @@ def main():
         prim_path="/World/ground",
         terrain_type="usd",
         # usd_path=f"{ISAAC_NUCLEUS_DIR}/Environments/Simple_Warehouse/warehouse.usd",
-        usd_path="/project/EXP/Sence/Warehouse/Warehouse.usd",
+        usd_path="/project/EXP/Sence/Senc/Warehouse/Warehouse.usd",
     )
     # robot=env_cfg.scene[]
     env_cfg.sim.device = "cpu"
